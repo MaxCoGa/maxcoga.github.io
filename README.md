@@ -6,6 +6,9 @@ created using react.
 **Init**
 - npm init react-app max-app
 
+**Start Dev**
+- npm start
+
 **Deploy**
 - cd max-app
 - npm run deploy
@@ -19,4 +22,4 @@ created using react.
 
 **package properties**
 - add "homepage": "https://maxcoga.github.io"
-
+- npm install react-router@latest

@@ -1,25 +1,39 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import {NavLink, Navbar, Nav, NavItem} from 'react-bootstrap';
+import { Routes, Route, Link  } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Projects from './components/Projects.js';
+import Home from "./components/Home.js"
+
+//import Main from './Main';
+
+const App = () => (
+  <div className='app'>
+    <h1>React Router Demo</h1>
+    <Navigation />
+    <Main />
+  </div>
+);
 
 export default App;
+
+const Navigation = () => (
+  <nav>
+    <ul>
+      <li><NavLink to='/'>Home</NavLink></li>
+      <li><NavLink to='/projects'>Projects</NavLink></li>
+    </ul>
+  </nav>
+);
+
+
+
+
+const Main = () => (
+  <Routes>
+    <Route exact path='/' component={Home}></Route>
+    <Route exact path='/Projects' component={Projects}></Route>
+  </Routes>
+);
+
