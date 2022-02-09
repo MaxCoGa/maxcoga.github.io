@@ -1,5 +1,5 @@
 # maxcoga.github.io
- personal website
+To see the current build: https://github.com/MaxCoGa/maxcoga.github.io/tree/gh-pages 
 
 created using react.
 
