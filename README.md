@@ -6,6 +6,10 @@ created using react.
 **Init**
 - npm init react-app max-app
 
+**Deploy**
+- cd max-app
+- npm run deploy
+
 **Update**
 - npm install react-scripts@latest
 
@@ -15,3 +19,4 @@ created using react.
 
 **package properties**
 - add "homepage": "https://maxcoga.github.io"
+
