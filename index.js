@@ -34,16 +34,31 @@ const routes = {
         title: "Blog",
         description: "This is the blog page",
     },
+    "/blog/test-post": {
+        name: "Blog",
+        template: "/blog/test-post/index.html",
+        title: "Blog",
+        description: "This is the blog page",
+    },
 };
 
 // create document click that watches the nav links only
 document.addEventListener("click", (e) => {
     const { target } = e;
-    if (!target.matches("nav a")) {
+    console.log(target);
+    if (target.matches("a div")) {
         return;
     }
-    e.preventDefault();
-    route();
+    if (target.matches("nav a")) {
+        console.log("1");
+        e.preventDefault();
+        route();
+    }
+    if (target.matches("a img") || target.matches("a h1") || target.matches("a p")) {
+        console.log("2");
+        e.preventDefault();
+        route();
+    }
 });
 
 const route = (event) => {
@@ -60,6 +75,7 @@ const locationHandler = async () => {
     if (location.length == 0) {
         location = "/";
     }
+
     // get the route object from the urlRoutes object
     const route = routes[location] || routes["404"];
     // get the html from the template
@@ -68,16 +84,16 @@ const locationHandler = async () => {
     document.getElementById("content").innerHTML = html;
 
     //set the navlink as active
-    if (!document.getElementById("refHome").classList.contains('active') && location.length == 0) {
-        document.getElementById("refHome").classList.add("active");
-    } 
-    else {
-        var active = document.getElementsByClassName("active");
-        while(active.length){
-            document.getElementsByClassName("active")[0].classList.remove("active");
-        }
-        document.getElementById("ref".concat(route.name)).classList.add("active");
-    }
+    // if (!document.getElementById("refHome").classList.contains('active') && location.length == 0) {
+    //     document.getElementById("refHome").classList.add("active");
+    // } 
+    // else {
+    //     var active = document.getElementsByClassName("active");
+    //     while(active.length){
+    //         document.getElementsByClassName("active")[0].classList.remove("active");
+    //     }
+    //     document.getElementById("ref".concat(route.name)).classList.add("active");
+    // }
 
     // set the title of the document to the title of the route
     document.title = route.title;
