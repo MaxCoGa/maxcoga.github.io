@@ -1,3 +1,26 @@
+const statics = {
+    "navbar": {
+        template: "/static/navbar.html",
+        title: "navbar",
+        description: "navbar",
+    },
+    "footer": {
+        template: "/static/footer.html",
+        title: "footer",
+        description: "footer",
+    },
+    "header": {
+        template: "/static/header.html",
+        title: "header",
+        description: "header",
+    },
+    "version": {
+        template: "/version.html",
+        title: "version",
+        description: "version",
+    },
+};
+
 const routes = {
     404: {
         template: "/mod/404.html",
@@ -6,7 +29,7 @@ const routes = {
     },
     "/": {
         name: "Home",
-        template: "/mod/index.html",
+        template: "/mod/home/index.html",
         title: "maxksorg",
         description: "This is the home page",
     },
@@ -34,9 +57,9 @@ const routes = {
         title: "Blog",
         description: "This is the blog page",
     },
-    "/blog/test-post": {
+    "/blog/post/test-post": {
         name: "Blog",
-        template: "/blog/test-post/index.html",
+        template: "/mod/blog/post/test-post/index.html",
         title: "Blog",
         description: "This is the blog page",
     },
@@ -45,17 +68,11 @@ const routes = {
 // create document click that watches the nav links only
 document.addEventListener("click", (e) => {
     const { target } = e;
-    console.log(target);
+    // console.log(target);
     if (target.matches("a div")) {
         return;
     }
     if (target.matches("nav a")) {
-        console.log("1");
-        e.preventDefault();
-        route();
-    }
-    if (target.matches("a img") || target.matches("a h1") || target.matches("a p")) {
-        console.log("2");
         e.preventDefault();
         route();
     }
@@ -83,17 +100,26 @@ const locationHandler = async () => {
     // set the content of the content div to the html
     document.getElementById("content").innerHTML = html;
 
-    //set the navlink as active
-    // if (!document.getElementById("refHome").classList.contains('active') && location.length == 0) {
-    //     document.getElementById("refHome").classList.add("active");
-    // } 
-    // else {
-    //     var active = document.getElementsByClassName("active");
-    //     while(active.length){
-    //         document.getElementsByClassName("active")[0].classList.remove("active");
-    //     }
-    //     document.getElementById("ref".concat(route.name)).classList.add("active");
-    // }
+    // set the content of the content div
+    if(document.querySelector("head").childNodes.length < 10) {
+        const navbarDiv = await fetch(statics["header"].template).then((response) => response.text());
+        document.querySelector("head").innerHTML = navbarDiv;
+    }
+
+    if(document.querySelector("#navbar").childNodes.length == 0) {
+        const navbarDiv = await fetch(statics["navbar"].template).then((response) => response.text());
+        document.getElementById("navbar").innerHTML = navbarDiv;
+    }
+
+    if(document.querySelector("#footer").childNodes.length == 0) {
+        const footerDiv = await fetch(statics["footer"].template).then((response) => response.text());
+        document.getElementById("footer").innerHTML = footerDiv;
+    }
+
+    if(document.querySelector("#version").childNodes.length == 0) {
+        const versionDiv = await fetch(statics["version"].template).then((response) => response.text());
+        document.getElementById("version").innerHTML = versionDiv;
+    }
 
     // set the title of the document to the title of the route
     document.title = route.title;
