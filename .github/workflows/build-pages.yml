@@ -33,6 +33,8 @@ jobs:
             cp -r src/* public/
             git checkout --orphan gh-pages
             git reset
+            git config --global user.email "you@example.com"
+            git config --global user.name "maxksorg builder"
             git add .github/*
             git add public/*
             git commit -m "Build"
