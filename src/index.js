@@ -33,31 +33,31 @@ const routes = {
         title: "maxksorg",
         description: "This is the home page",
     },
-    "/?/about": {
+    "/about": {
         name: "About",
         template: "/mod/about/index.html",
         title: "About Me",
         description: "This is the about page",
     },
-    "/?/contact": {
+    "/contact": {
         name: "Contact",
         template: "/mod/contact/index.html",
         title: "Contact Me",
         description: "This is the contact page",
     },
-    "/?/projects": {
+    "/projects": {
         name: "Projects",
         template: "/mod/projects/index.html",
         title: "Projects",
         description: "This is the projects page",
     },
-    "/?/blog": {
+    "/blog": {
         name: "Blog",
         template: "/mod/blog/index.html",
         title: "Blog",
         description: "This is the blog page",
     },
-    "/?/blog/post/test-post": {
+    "/blog/post/test-post": {
         name: "Blog",
         template: "/mod/blog/post/test-post/index.html",
         title: "Blog",
