@@ -7,4 +7,3 @@ git commit -m "Build"
 git push -u origin build
 git checkout dev --force
 git branch -D build
-rm ../public
