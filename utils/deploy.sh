@@ -2,7 +2,7 @@
 # run from root
 mkdir ../public
 cp src/* ../public/
-cd ..
+# cd ..
 git switch --orphan build
 git add ./public/*
 git commit -m "Build"
