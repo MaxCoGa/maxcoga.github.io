@@ -1,4 +1,4 @@
-name: Deploy static content to Pages
+name: Build static content to Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -29,4 +29,5 @@ jobs:
         - name: Checkout
           uses: actions/checkout@v3
         - run: |
+            ls
             git checkout --orphan gh-pages
