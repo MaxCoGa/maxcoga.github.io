@@ -1,9 +1,9 @@
 mkdir ../public
 cp -r ../src/* ../public/
-git checkout --orphan build
+git checkout --orphan gh-pages
 git reset
 git add ../public/*
 git commit -m "Build"
-git push -u origin build
-git checkout dev --force
-git branch -D build
+git push -u origin gh-pages
+git checkout main --force
+git branch -D gh-pages
