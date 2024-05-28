@@ -1,0 +1,14 @@
+https://maxks.org/
+https://maxks.org/?/about
+https://maxks.org/?/blog
+https://maxks.org/?/blog/post
+https://maxks.org/?/blog/post/test-post
+https://maxks.org/?/contact
+https://maxks.org/?/home
+https://maxks.org/?/projects
+https://maxks.org/?/projects/csc
+https://maxks.org/?/projects/ido
+https://maxks.org/?/projects/idy
+https://maxks.org/?/projects/mynote
+https://maxks.org/?/projects/paran
+https://maxks.org/?/projects/psv
