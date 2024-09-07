@@ -3,5 +3,5 @@ module.exports = {
 		"posts"
 	],
 	"layout": "post.njk",
-	permalink: "blog/{{ post_link }}"
+	permalink: "blog/{{ post_link }}/"
 };
