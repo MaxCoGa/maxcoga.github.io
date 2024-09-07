@@ -19,7 +19,7 @@ At **maxksorg**, my mission is simple: to empower developers at all levels to en
 
 - **In-Depth Tutorials**: Step-by-step guides on various programming languages and technologies.
 - **Project Showcases**: Detailed breakdowns of interesting projects, including code snippets and explanations.
-- **Community Discussions**: Engage with like-minded developers through our [Discord community](https://discord.gg/uPjxFsFhhY).
+- **Community Discussions**: Engage with like-minded developers through our [Discord community](https://discord.gg/tE67aySvSz).
 - **Open Source Contributions**: Insights into the open-source projects I'm involved with and how you can contribute too.
 
 ## Join the Journey
@@ -29,7 +29,7 @@ I'm excited to share this journey with you and to see how we can grow as develop
 - [X](https://x.com/maxksorg)
 - [YouTube](https://www.youtube.com/@maxksorg)
 - [GitHub](https://github.com/maxksorg)
-- [Discord](https://discord.gg/uPjxFsFhhY)
+- [Discord](https://discord.gg/tE67aySvSz)
 - [Instgram](https://www.instagram.com/maxksorg/)
 - [TikTok](https://www.tiktok.com/@maxksorg)
 

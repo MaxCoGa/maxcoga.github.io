@@ -12,7 +12,7 @@ eleventyNavigation:
 I'd love to hear from you! Whether you have a question, feedback, or just want to connect, feel free to reach out.
 
 ### Discord Community
-Join my [maxkorg's Discord community](https://discord.gg/uPjxFsFhhY) to connect with like-minded developers, get support, and stay updated on my latest projects.
+Join my [maxkorg's Discord community](https://discord.gg/tE67aySvSz) to connect with like-minded developers, get support, and stay updated on my latest projects.
 
 ### Social Media
 - [maxksorg's YouTube](https://www.youtube.com/@maxksorg)
