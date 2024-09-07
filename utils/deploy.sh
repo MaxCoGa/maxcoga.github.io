@@ -1,10 +1,9 @@
-mkdir ../public
-cp -r ../src/* ../public/
-git checkout --orphan gh-pages
-git reset
-git add ../.github/*
-git add ../public/*
-git commit -m "Build"
-git push -u origin gh-pages --force
+npm install
+npm run build
+git checkout pages
+git add *
+currentDate="`date +'%Y-%m-%d %H:%M:%S'`"
+gitmsg="Build: $currentDate"
+git commit -m "$gitmsg"
+git push -u origin pages --force
 git checkout main --force
-git branch -D gh-pages
