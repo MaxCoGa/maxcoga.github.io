@@ -1,6 +1,7 @@
+git checkout pages
+git merge main
 npm install
 npm run build
-git checkout pages
 git add *
 currentDate="`date +'%Y-%m-%d %H:%M:%S'`"
 gitmsg="Build: $currentDate"

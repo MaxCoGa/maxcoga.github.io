@@ -31,9 +31,10 @@ jobs:
         - run: |
             git config --global user.email "you@example.com"
             git config --global user.name "maxksorg builder"
+            git checkout pages
+            git merge main
             npm install
             npm run build
-            git checkout pages
             git add *
             currentDate="`date +'%Y-%m-%d %H:%M:%S'`"
             gitmsg="Build: $currentDate"
