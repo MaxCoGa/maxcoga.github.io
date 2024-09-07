@@ -1,1 +1,4 @@
-Sitemap: https://maxks.org/sitemap.txt
+Sitemap: https://maxks.org/sitemap.xml
+
+User-agent: *
+Disallow:

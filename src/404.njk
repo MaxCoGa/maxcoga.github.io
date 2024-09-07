@@ -1,0 +1,62 @@
+---
+layout: base.njk
+permalink: 404.html
+eleventyExcludeFromCollections: true
+---
+
+<style>
+    .spiral {
+        top: 10%;
+        display: flex;
+        align-items: top;
+        gap: 10px;
+        {# position: absolute; #}
+    }
+
+    @property --angle {
+        initial-value: 0deg;
+        inherits: false;
+        syntax: '<angle>';
+    }
+
+    @keyframes spiral{
+        0%{
+            --angle: 0deg;
+        }
+        100%{
+            --angle: 360deg
+        }
+    }
+
+    .character {
+        color: black;
+        font-size: 4em;
+        transform: translateY(calc(sin(var(--angle)) * 100px)) scale(calc(cos(var(--angle)) * 0.5 + 0.5));
+        animation: spiral 4s linear infinite;
+    }
+</style>
+
+<div id="spiral" class="spiral"></div>
+<div id="spiral2" class="spiral"></div>
+
+<script>
+    const words = "maxksorg";
+    const specials = "🧙‍♂️";
+
+    const ANIMATION_DURATION = 4000;
+
+    const characters = words.split("").forEach((char, i) => {
+        function createElement(offset) {
+            const div = document.createElement("div");
+            div.innerText = char;
+            div.classList.add("character");
+            div.style.animationDelay = `-${i * (ANIMATION_DURATION / words.length) - offset}ms`;
+            return div;
+        }
+
+        document.getElementById("spiral").append(createElement(0));
+        document.getElementById("spiral2").append(createElement(-1 * (ANIMATION_DURATION / 2)));
+    });
+</script>
+
+Go <a href="/">home</a>.

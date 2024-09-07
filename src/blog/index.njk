@@ -1,0 +1,13 @@
+---
+title: maxksorg - Blog
+layout: base.njk
+eleventyNavigation:
+  key: Blog
+  order: 3
+---
+
+<h1>maxksorg Blog</h1>
+<p>Your source for programming insights, tutorials, and community updates.</p>
+
+{% set postslist = collections.posts %}
+{% include "postslist.njk" %}
