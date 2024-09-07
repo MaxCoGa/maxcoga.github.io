@@ -8,3 +8,4 @@ gitmsg="Build: $currentDate"
 git commit -m "$gitmsg"
 git push -u origin pages --force
 git checkout main --force
+rm -r public/
