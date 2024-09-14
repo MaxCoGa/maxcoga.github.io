@@ -34,7 +34,7 @@ jobs:
             git config --global user.email "you@example.com"
             git config --global user.name "maxksorg builder"
             git fetch
-            git merge origin/main --strategy-option theirs
+            git merge origin/main --allow-unrelated-histories --strategy-option theirs
             npm install
             npm run build
             git add *
