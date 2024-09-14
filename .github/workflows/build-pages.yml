@@ -34,7 +34,7 @@ jobs:
             git config --global user.email "you@example.com"
             git config --global user.name "maxksorg builder"
             git fetch
-            git rebase origin/main
+            git rebase origin/main --strategy-option theirs
             npm install
             ls -la
             rm -rf public/
