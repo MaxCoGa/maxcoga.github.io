@@ -19,5 +19,7 @@ module.exports = {
 	tiktok: "https://www.tiktok.com/@maxksorg",
 	favicon: "/favicon.ico",
 	css: "/style.css",
+	js: "/index.js",
+	year: "2024",
 	version: "0.0.1"
 }
