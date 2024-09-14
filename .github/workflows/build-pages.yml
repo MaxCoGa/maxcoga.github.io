@@ -39,3 +39,4 @@ jobs:
             ls -la
             rm -rf public/
             ls -la
+            npm run build
