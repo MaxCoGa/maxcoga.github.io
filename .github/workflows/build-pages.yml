@@ -33,8 +33,8 @@ jobs:
         - run: |
             git config --global user.email "you@example.com"
             git config --global user.name "maxksorg builder"
-            git fetch
-            git rebase origin/main --strategy-option theirs
+            git fetch --all
+            git merge main 
             npm install
             ls -la
             rm -rf public/
