@@ -36,6 +36,7 @@ jobs:
             git fetch
             git merge origin/main --allow-unrelated-histories --strategy-option theirs
             npm install
+            rm -r public/
             npm run build
             git add *
             currentDate="`date +'%Y-%m-%d %H:%M:%S'`"
