@@ -68,7 +68,7 @@ jobs:
 
         - name: "Push new build to pages"
           run: |
-            git add *
+            git add .
             currentDate="`date +'%Y-%m-%d %H:%M:%S'`"
             gitmsg="Build: $currentDate"
             git commit -m "$gitmsg"
