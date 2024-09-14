@@ -30,11 +30,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: Checkout main
-          uses: actions/checkout@v3
+          uses: actions/checkout@v4
           with:
             token: ${{ secrets.PAT_TOKEN }}
-            fetch-depth: 0
-            ref: main
 
         - name: Set up git
           run: |
@@ -67,10 +65,10 @@ jobs:
           run: |
             npm run build
 
-        - name: "Push new build to pages"
-          run: |
-            git add .
-            currentDate="`date +'%Y-%m-%d %H:%M:%S'`"
-            gitmsg="Build: $currentDate"
-            git commit -m "$gitmsg"
-            git push -u origin pages --force
+        # - name: "Push new build to pages"
+        #   run: |
+        #     git add .
+        #     currentDate="`date +'%Y-%m-%d %H:%M:%S'`"
+        #     gitmsg="Build: $currentDate"
+        #     git commit -m "$gitmsg"
+        #     git push -u origin pages --force
