@@ -40,7 +40,7 @@ jobs:
             git config --global user.email "you@example.com"
             git config --global user.name "maxksorg builder"
 
-        - name: "Push changes to pages"
+        - name: "Merge changes from main to pages"
           run: |
             git fetch origin
             git checkout pages
@@ -65,3 +65,11 @@ jobs:
         - name: "Build webapp"
           run: |
             npm run build
+
+        - name: "Push new build to pages"
+          run: |
+            git add *
+            currentDate="`date +'%Y-%m-%d %H:%M:%S'`"
+            gitmsg="Build: $currentDate"
+            git commit -m "$gitmsg"
+            git push -u origin pages --force
