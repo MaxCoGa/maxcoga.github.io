@@ -26,17 +26,21 @@ jobs:
     build:
         runs-on: ubuntu-latest
         steps:
-        - name: Checkout
+        - name: Checkout main
           uses: actions/checkout@v4
           with:
-            ref: pages
-        - run: |
+            fetch-depth: 0
+
+        - name: Set up git
+          run: |
             git config --global user.email "you@example.com"
             git config --global user.name "maxksorg builder"
-            git fetch --all
-            git merge main 
-            npm install
+
+        - name: "Push changes to pages"
+          run: |
+            git fetch origin
+            git checkout pages
+            git merge main
             ls -la
             rm -rf public/
             ls -la
-            npm run build
