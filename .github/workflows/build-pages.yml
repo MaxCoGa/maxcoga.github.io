@@ -2,8 +2,8 @@ name: Build static content to Pages
 
 on:
   # Runs on pushes targeting the default branch
-#   push:
-    # branches: [$default-branch]
+  push:
+    branches: [$default-branch]
     # branches: 
     # - gh-pages
 
@@ -12,7 +12,7 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-    contents: read
+    contents: write
     pages: write
     id-token: write
   
@@ -22,20 +22,54 @@ concurrency:
     cancel-in-progress: true
 
 
+env:
+  node-version: '20.14.0'
+
 jobs:
     build:
         runs-on: ubuntu-latest
         steps:
-        - name: Checkout
-          uses: actions/checkout@v3
-        - run: |
+        - name: Checkout main
+          uses: actions/checkout@v4
+          with:
+            token: ${{ secrets.PAT_TOKEN }}
+            fetch-depth: 0
+            ref: main
+
+        - name: Set up git
+          run: |
             git config --global user.email "you@example.com"
             git config --global user.name "maxksorg builder"
+
+        - name: "Merge changes from main to pages"
+          run: |
+            git fetch origin
             git checkout pages
             git merge main
+            ls -la
+            rm -rf public/
+            ls -la
+
+        - name: "Clean up public/"
+          run: |
+            rm -rf public/
+
+        - name: Use Node.js ${{ env.node-version }}
+          uses: actions/setup-node@v4
+          with:
+            node-version: ${{ env.node-version }}
+
+        - name: "Install webapp"
+          run: |
             npm install
+
+        - name: "Build webapp"
+          run: |
             npm run build
-            git add *
+
+        - name: "Push new build to pages"
+          run: |
+            git add .
             currentDate="`date +'%Y-%m-%d %H:%M:%S'`"
             gitmsg="Build: $currentDate"
             git commit -m "$gitmsg"
