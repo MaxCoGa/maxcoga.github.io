@@ -27,11 +27,13 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: Checkout
-          uses: actions/checkout@v3
+          uses: actions/checkout@v4
+          with:
+            ref: pages
         - run: |
             git config --global user.email "you@example.com"
             git config --global user.name "maxksorg builder"
-            git checkout pages
+            git fetch
             git merge main
             npm install
             npm run build
