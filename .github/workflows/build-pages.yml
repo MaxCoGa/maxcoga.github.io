@@ -36,10 +36,4 @@ jobs:
             git fetch
             git merge origin/main --allow-unrelated-histories --strategy-option theirs
             npm install
-            rm -rf /home/runner/work/maxcoga.github.io/maxcoga.github.io/public/
-            npm run build
-            git add *
-            currentDate="`date +'%Y-%m-%d %H:%M:%S'`"
-            gitmsg="Build: $currentDate"
-            git commit -m "$gitmsg"
-            git push -u origin pages --force
+            ls -la
