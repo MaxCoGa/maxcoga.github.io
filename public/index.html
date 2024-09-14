@@ -1,34 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="maxks">
-  <meta name="description" content="maxksorg is your go-to source for innovative programming solutions. Explore tutorials, projects, and resources designed to help developers of all levels enhance their coding skills and build efficient software.">
-  <link rel="icon" href="/favicon.ico" type="image/ico"/>
-  <link rel="stylesheet" href="/style.css" />
-  <title>maxksorg</title>
-</head>
-<body>
-  <header>
-    
-    <a href="/" class="home-link">maxksorg</a>
-    <nav>
-        
-        <ul class="nav">
-            <li class="nav-item"><a href="/about/">About</a></li>
-            <li class="nav-item"><a href="/contact/">Contact</a></li>
-            <li class="nav-item"><a href="/blog/">Blog</a></li>
-            <li class="nav-item"><a href="/projects/">Projects</a></li>
-        </ul>
-    </nav>
-    
-  </header>
-  <main>
-    <p>Your go-to source for innovative programming solutions. Explore tutorials, projects, and resources designed to help developers of all levels enhance their coding skills and build efficient software.</p>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="maxks">
+    <meta name="description" content="maxksorg is your go-to source for innovative programming solutions. Explore tutorials, projects, and resources designed to help developers of all levels enhance their coding skills and build efficient software.">
+    <link rel="icon" href="/favicon.ico" type="image/ico"/>
+    <link rel="stylesheet" href="/style.css"/>
+    <script type="text/javascript" src="/index.js"></script>
+    <title>maxksorg</title>
+  </head>
+  <body>
+    <header>
+      <div class="navGridContainer">
+        <div class="homeLinkGrid">
+          <a href="/" class="home-link">maxksorg</a>
+        </div>
 
-  </main>
+        <div class="navLinkGrid">
+          <nav>
+            <ul class="nav" id="navMenu">
+                <li class="nav-item">
+                  <a href="/about/" >About</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/contact/" >Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/blog/" >Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/projects/" >Projects</a>
+                </li>
+              <li href="javascript:void(0);" class="icon">
+                <a>
+                  <span onclick="openNav()">≡</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
 
-  <footer>maxksorg</footer>
-</body>
+      <div id="navOverlay" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <a href="/about/" >About</a>
+            <a href="/contact/" >Contact</a>
+            <a href="/blog/" >Blog</a>
+            <a href="/projects/" >Projects</a>
+        </div>
+      </div>
+
+    </header>
+    <main>
+      <h1>maxksorg</h1>
+<p>Your go-to source for innovative programming solutions. Explore tutorials, projects, and resources designed to help developers of all levels enhance their coding skills and build efficient software.</p>
+    </main>
+    <footer>maxksorg © 2024</footer>
+  </body>
 </html>
