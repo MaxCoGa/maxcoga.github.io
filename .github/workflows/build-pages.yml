@@ -44,7 +44,7 @@ jobs:
           run: |
             git fetch origin
             git checkout pages
-            git merge main
+            git merge --strategy-option theirs main
             ls -la
             rm -rf public/
             ls -la
