@@ -17,3 +17,9 @@ npx @11ty/eleventy --serve
 
 ## Create the base Layout
 1. src/_includes/base.njk
+
+
+### workflow
+1. push to main
+1. ci build and push to pages
+1. ci deploy pages artifact
