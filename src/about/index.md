@@ -4,6 +4,7 @@ layout: base.njk
 eleventyNavigation:
   key: About
   order: 1
+date: 2024-09-07
 ---
 # About
 

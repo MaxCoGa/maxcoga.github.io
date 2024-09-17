@@ -1,6 +1,7 @@
 ---
 title: maxksorg - misc
 layout: base.njk
+date: 2024-09-15
 ---
 # {{ title }}
 
