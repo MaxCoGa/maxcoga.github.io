@@ -45,7 +45,14 @@ jobs:
             git fetch origin
             git checkout pages
             git merge --strategy-option theirs main
-            rm -rf public/
+
+        - name: "Get last update of files"
+          run: |
+            git ls-tree -r --name-only HEAD | while read filename; do
+              unixtime=$(git log -1 --format="%at" -- "${filename}")
+              touchtime=$(date -d @$unixtime +'%Y%m%d%H%M.%S')
+              touch -t ${touchtime} "${filename}"
+            done
 
         - name: "Clean up public/"
           run: |
@@ -59,14 +66,6 @@ jobs:
         - name: "Install webapp"
           run: |
             npm install
-
-        - name: "Get last update of files"
-          run: |
-            git ls-tree -r --name-only HEAD | while read filename; do
-              unixtime=$(git log -1 --format="%at" -- "${filename}")
-              touchtime=$(date -d @$unixtime +'%Y%m%d%H%M.%S')
-              touch -t ${touchtime} "${filename}"
-            done
   
         - name: "Build webapp"
           run: |
