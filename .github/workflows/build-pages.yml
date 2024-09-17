@@ -60,10 +60,6 @@ jobs:
           run: |
             npm install
 
-        - name: "Build webapp"
-          run: |
-            npm run build
-
         - name: "Get last update of files"
           run: |
             git ls-tree -r --name-only HEAD | while read filename; do
@@ -71,6 +67,10 @@ jobs:
               touchtime=$(date -d @$unixtime +'%Y%m%d%H%M.%S')
               touch -t ${touchtime} "${filename}"
             done
+  
+        - name: "Build webapp"
+          run: |
+            npm run build
 
         - name: "Push new build to pages"
           run: |

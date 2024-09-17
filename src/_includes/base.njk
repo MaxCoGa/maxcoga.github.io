@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="{{ metadata.author.name }}">
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:url" content="{{ metadata.url }}{{ page.url }}" />
+    <meta property="og:image" content="{{ metadata.url }}/static/assets/mks.jpg" />
+    {% if description %} 
+    <meta property="description" content="{{ description }}" /> 
+    <meta property="og:description" content="{{ description }}" /> 
+    {% else %}
     <meta name="description" content="{{ metadata.description }}">
+    <meta name="og:description" content="{{ metadata.description }}">
+    {% endif %}
     <link rel="icon" href="{{ metadata.favicon }}" type="image/ico"/>
     <link rel="stylesheet" href="{{ metadata.css }}"/>
     <script type="text/javascript" src="{{ metadata.js }}"></script>
