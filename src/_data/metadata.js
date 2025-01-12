@@ -20,6 +20,6 @@ module.exports = {
 	favicon: "/favicon.ico",
 	css: "/style.css",
 	js: "/index.js",
-	year: "2024",
+	year: "2025",
 	version: "0.0.1"
 }
