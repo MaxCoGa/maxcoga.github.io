@@ -9,11 +9,11 @@ Welcome to the Miscellaneous page! Here, you'll find useful links to explore var
 
 ### Source
 
-[maxksorg (maxks.org) source code](https://github.com/MaxCoGa/maxcoga.github.io)
+[maxksorg (maxks.org) source code]({{ metadata.repo }})
 
 ### Artifact
 
-[maxks.org artifact](https://github.com/MaxCoGa/maxcoga.github.io/tree/pages/public)
+[maxks.org artifact]({{ metadata.repo }}/tree/pages/public)
 
 ### Version
 
@@ -25,9 +25,9 @@ Welcome to the Miscellaneous page! Here, you'll find useful links to explore var
 
 ### CI/CD pipeline
 
-[![Build static content to Pages](https://github.com/MaxCoGa/maxcoga.github.io/actions/workflows/build-pages.yml/badge.svg?branch=main)](https://github.com/MaxCoGa/maxcoga.github.io/actions/workflows/build-pages.yml)
+[![Build static content to Pages]({{ metadata.repo }}/actions/workflows/build-pages.yml/badge.svg?branch=main)]({{ metadata.repo }}/actions/workflows/build-pages.yml)
 
-[![Deploy static content to Pages](https://github.com/MaxCoGa/maxcoga.github.io/actions/workflows/deploy-pages.yml/badge.svg?branch=pages)](https://github.com/MaxCoGa/maxcoga.github.io/actions/workflows/deploy-pages.yml)
+[![Deploy static content to Pages]({{ metadata.repo }}/actions/workflows/deploy-pages.yml/badge.svg?branch=pages)]({{ metadata.repo }}/actions/workflows/deploy-pages.yml)
 
 ### Stack
 

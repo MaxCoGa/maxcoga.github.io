@@ -1,6 +1,7 @@
 module.exports = {
 	title: "maxksorg",
 	url: "https://maxks.org",
+	repo: "https://github.com/maxcoga/maxcoga.github.io",
 	language: "en",
 	description: "maxksorg is your go-to source for innovative programming solutions. Explore tutorials, projects, and resources designed to help developers of all levels enhance their coding skills and build efficient software.",
 	author: {
