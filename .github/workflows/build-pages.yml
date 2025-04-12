@@ -76,5 +76,9 @@ jobs:
             git add .
             currentDate="`date +'%Y-%m-%d %H:%M:%S'`"
             gitmsg="Build: $currentDate"
-            git commit -m "$gitmsg"
+            if [ -n "$(git status --porcelain)" ]; then
+              git commit -m "$gitmsg"
+            else
+              echo "No changes to commit."
+            fi
             git push -u origin pages --force
