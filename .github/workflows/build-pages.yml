@@ -22,7 +22,7 @@ permissions:
 
 
 env:
-  node-version: '20.14.0'
+  node-version: '24.11.1'
 
 jobs:
     build:
