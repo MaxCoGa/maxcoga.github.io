@@ -16,6 +16,11 @@
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-bundle": "^1.0.4"
   },
+  "overrides": {
+    "maximatch": {
+      "minimatch": "10.2.1"
+    }
+  },
   "devDependencies": {},
   "repository": {
     "type": "git",
