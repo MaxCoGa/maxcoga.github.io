@@ -21,6 +21,6 @@ module.exports = {
 	favicon: "/favicon.ico",
 	css: "/style.css",
 	js: "/index.js",
-	year: "2025",
+	year: "2026",
 	version: "0.0.1"
 }
